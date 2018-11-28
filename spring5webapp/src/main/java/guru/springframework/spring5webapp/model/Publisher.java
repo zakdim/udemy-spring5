@@ -13,22 +13,14 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private String addressLine;
-    private String city;
-    private String province;
-    private String country;
-    private String postalCode;
+    private String address;
 
     public Publisher() {
     }
 
-    public Publisher(String name, String addressLine, String city, String province, String country, String postalCode) {
+    public Publisher(String name, String address) {
         this.name = name;
-        this.addressLine = addressLine;
-        this.city = city;
-        this.province = province;
-        this.country = country;
-        this.postalCode = postalCode;
+        this.address = address;
     }
 
     public Long getId() {
@@ -47,44 +39,12 @@ public class Publisher {
         this.name = name;
     }
 
-    public String getAddressLine() {
-        return addressLine;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAddressLine(String addressLine) {
-        this.addressLine = addressLine;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-
-    public String getProvince() {
-        return province;
-    }
-
-    public void setProvince(String province) {
-        this.province = province;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
@@ -105,11 +65,7 @@ public class Publisher {
         return "Publisher{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", addressLine='" + addressLine + '\'' +
-                ", city='" + city + '\'' +
-                ", province='" + province + '\'' +
-                ", country='" + country + '\'' +
-                ", postalCode='" + postalCode + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }
