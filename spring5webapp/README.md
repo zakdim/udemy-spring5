@@ -14,7 +14,7 @@ jdbc:h2:mem:testdb
 ### Create branch from master ###
 ```
 # create new branch jpa-entities and switch to it
-git branch -b jpa-entities
+git checkout -b jpa-entities
 
 # push new branch to github
 git push -u origin jpa-entities
